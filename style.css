@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a; /* Fundo escuro para destacar */
+}
+
+#esfera {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db; /* Cor inicial */
+    border-radius: 50%;
+    cursor: pointer;
+    
+    /* Suaviza a transição da cor */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    
+    /* Efeito de profundidade (esfera) */
+    box-shadow: inset -20px -20px 50px rgba(0,0,0,0.5), 
+                0 0 20px rgba(255,255,255,0.1);
+}
+
+/* ... mantenha o código anterior do body ... */
+
+#esfera {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    
+    /* Sombra interna para dar efeito de volume */
+    box-shadow: inset -20px -20px 50px rgba(0,0,0,0.5);
+
+    /* --- ADICIONE ESTAS LINHAS ABAIXO --- */
+    animation: rodar 4s linear infinite; 
+}
+
+/* Criando a animação de rotação */
+@keyframes rodar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
